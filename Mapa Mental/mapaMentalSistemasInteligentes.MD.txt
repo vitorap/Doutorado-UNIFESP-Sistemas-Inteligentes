@@ -6,7 +6,7 @@ markmap:
 
 # Mapa Mental IA - Vitor Albuquerque de Paula
 
-## 1. Introdução à IA
+## Introdução à IA
    - Definição
        - Inteligência Artificial (IA) é o campo da ciência da computação dedicado a criar sistemas que exibem comportamentos que, se realizados por humanos, exigiriam inteligência. Inclui a capacidade de raciocinar, aprender, perceber e interagir com o ambiente.
 
@@ -25,7 +25,7 @@ markmap:
        - Ética e Impacto Social: Considerações sobre como a IA afeta a sociedade, incluindo privacidade, emprego e viés algorítmico.
 
 
-## 2. Tipos de IA
+## Tipos de IA
    - IA Estreita (ANI - Artificial Narrow Intelligence)
        - Definição: Também conhecida como IA Fraca, é especializada em uma única tarefa ou conjunto de tarefas, operando sob um conjunto limitado de parâmetros e contexto.
        - Exemplos: Sistemas de recomendação, assistentes virtuais como Siri ou Alexa, carros autônomos.
@@ -58,7 +58,7 @@ markmap:
        - Implicações: Levanta questões profundas sobre a natureza da consciência e as implicações éticas do desenvolvimento de máquinas que podem perceber e sentir.
 
 
-## 3. Aprendizado de Máquina
+## Aprendizado de Máquina
    - Aprendizado Supervisionado
        - Regressão Linear
            - Conceito: Modelo de regressão que estima a relação linear entre variáveis independentes e uma variável dependente.
@@ -174,14 +174,54 @@ markmap:
            - Pode ser combinada com outras técnicas de aprendizado de máquina para melhorar a eficiência.
          - Variações: Máquinas de Boltzmann Restritas (RBM), que simplificam a estrutura para facilitar o treinamento.
 
-   - Redes Neurais
-       - Perceptron, Adaline, Perceptron Multicamadas (MLP), Redes de Função de Base Radial (RBFNs), Mapas Auto-organizáveis (SOMs)
-           - Conceito: Modelos computacionais inspirados no funcionamento do cérebro humano, usados para aproximar funções complexas.
-           - Funcionamento: Compostas por neurônios artificiais que processam informações e aprendem padrões nos dados.
-           - Aplicações: Classificação, regressão, reconhecimento de padrões.
-           - Limitações: Sensíveis a overfitting, podem ser difíceis de treinar e requerem ajuste fino dos parâmetros.
+## Redes Neurais
+  - Perceptron
+       - Conceito: Um dos modelos mais antigos de redes neurais, utilizado para classificação linear.
+       - Funcionamento Detalhado:
+           - Estrutura: Composto por um único neurônio com entrada ponderada, seguido por uma função de ativação.
+           - Pesos e Viés: Cada entrada é ponderada por um peso correspondente e um viés é adicionado.
+           - Função de Ativação: Geralmente uma função degrau, que ativa o neurônio se a soma ponderada das entradas exceder um certo limiar.
+           - Treinamento: Baseado na regra de aprendizado de Perceptron, que ajusta os pesos com base nos erros de classificação.
+       - Aplicações: Problemas de classificação binária simples, como reconhecimento de padrões básicos.
 
-## 4. Agentes de IA
+   - Adaline (Adaptive Linear Neuron)
+       - Conceito: Similar ao Perceptron, mas com uma função de custo diferente, o que a torna adequada para problemas mais complexos.
+       - Funcionamento Detalhado:
+           - Estrutura: Semelhante ao Perceptron com entradas ponderadas seguidas por uma função de ativação linear.
+           - Função de Custo: Usa a mínima dos quadrados como função de custo, diferentemente do Perceptron.
+           - Treinamento: Ajusta os pesos com base no gradiente descendente para minimizar a função de custo.
+       - Aplicações: Adequada para problemas de regressão e classificação que necessitam de respostas contínuas.
+
+   - Perceptron Multicamadas (MLP)
+       - Conceito: Uma rede neural mais complexa com uma ou mais camadas ocultas, capaz de modelar relações não lineares.
+       - Funcionamento Detalhado:
+           - Estrutura: Composta por uma camada de entrada, uma ou mais camadas ocultas e uma camada de saída.
+           - Neurônios e Ativação: Cada neurônio nas camadas ocultas soma as entradas ponderadas e aplica uma função de ativação não linear (como sigmoid ou ReLU).
+           - Backpropagation: Usa o algoritmo de retropropagação para treinar a rede, ajustando os pesos de forma iterativa com base no erro de saída.
+           - Aprendizado Profundo: MLPs são a base para redes neurais mais complexas usadas em aprendizado profundo.
+       - Aplicações: Classificação e regressão em problemas complexos, incluindo reconhecimento de voz e imagem.
+   - Redes de Função de Base Radial (RBFNs)
+       - Conceito: Redes especializadas em processar padrões não lineares, utilizadas em tarefas de classificação e regressão.
+       - Funcionamento Detalhado:
+           - Camada de Entrada: Recebe os dados brutos.
+           - Camada Oculta: Cada neurônio utiliza uma função de base radial (como a função Gaussiana) como função de ativação. Esses neurônios medem a distância entre o ponto de entrada e um centro, definido durante o treinamento.
+           - Cálculo da Ativação: A ativação de cada neurônio na camada oculta é baseada na distância euclidiana entre a entrada e o centro do neurônio, aplicando a função radial.
+           - Camada de Saída: Produz a saída do sistema, comumente uma combinação linear das ativações dos neurônios da camada oculta.
+           - Treinamento: Envolve ajustar os centros das funções radiais, geralmente usando uma técnica como o k-means, e depois treinar a camada de saída de maneira supervisionada.
+       - Aplicações: Uso eficaz em problemas onde a relação entre variáveis de entrada e saída é não linear e complexa.
+
+   - Mapas Auto-organizáveis (SOMs)
+       - Conceito: Usados para redução de dimensionalidade e visualização de dados de alta dimensão de forma a preservar as topologias.
+       - Funcionamento Detalhado:
+           - Estrutura: Composto por neurônios organizados em uma grade, geralmente 2D. Cada neurônio possui um vetor de pesos com a mesma dimensão dos vetores de entrada.
+           - Treinamento: Durante o treinamento, os vetores de entrada são comparados com os vetores de peso dos neurônios. O neurônio cujo vetor de peso é mais similar ao vetor de entrada (medido por distância euclidiana) é declarado o neurônio vencedor.
+           - Atualização de Pesos: O vetor de peso do neurônio vencedor e dos neurônios em sua vizinhança são ajustados para se tornarem mais semelhantes ao vetor de entrada. Isso permite que o mapa se auto-organize espacialmente de modo que padrões de entrada semelhantes ativem neurônios próximos.
+           - Iteração: Este processo é repetido para muitas entradas e várias iterações, levando a uma representação topológica dos dados de entrada na grade de neurônios.
+       - Aplicações: Úteis em visualização de dados complexos, onde padrões e relações podem ser identificados visualmente após a redução de dimensionalidade.
+
+
+
+## Agentes de IA
    - Definições e Propriedades
        - Agente de IA: Entidade computacional que percebe seu ambiente através de sensores e age sobre esse ambiente usando atuadores.
        - Autonomia: Capacidade de operar sem intervenção humana direta e ter controle sobre suas ações e estado interno.
@@ -239,7 +279,7 @@ markmap:
        - Programa de Agente: Implementação concreta da função do agente, executada em alguma arquitetura física.
 
 
-## 5. Busca em IA
+## Busca em IA
    - Busca sem Informação
        - Busca em Largura
            - Funcionamento: Explora todos os nós a uma determinada profundidade antes de passar para o próximo nível.
@@ -280,7 +320,7 @@ markmap:
            - Características: Bons para explorar grandes espaços de busca; não garantem a solução ótima.
 
 
-## 6. Algoritmos Bio-inspirados em IA
+## Algoritmos Bio-inspirados em IA
    - Inteligência de Enxame
        - Otimização por Enxame de Partículas (PSO)
            - Conceito: Técnica de otimização baseada na simulação do movimento e inteligência social de enxames, como pássaros e peixes.
@@ -324,7 +364,7 @@ markmap:
 
 
  
-## 8. Análise de Jogos em IA
+## Análise de Jogos em IA
    - Fundamentos de Análise de Jogos
        - Objetivo: Otimizar a tomada de decisão em ambientes competitivos.
        - Aplicações: Jogos de tabuleiro, jogos estratégicos, simulações de cenários competitivos.
@@ -348,7 +388,7 @@ markmap:
        - Generalização: Adaptar os algoritmos para diferentes tipos de jogos e cenários competitivos.
 
 
-## 13. Processamento de Linguagem Natural (PLN)
+## Processamento de Linguagem Natural (PLN)
    - Fundamentos de PLN
        - Conceito: Área da IA que lida com a interação entre computadores e a linguagem humana.
        - Objetivo: Permitir que computadores entendam, interpretem e manipulem a linguagem humana.
@@ -524,10 +564,7 @@ markmap:
        - Características: Interface de alto nível para redes neurais, executada em cima de frameworks como TensorFlow, Theano ou Microsoft Cognitive Toolkit.
        - Uso: Facilita a experimentação rápida com redes neurais profundas, sendo acessível para iniciantes e suficientemente versátil para pesquisadores experientes.
        - Particularidades: Foco na usabilidade e na modularidade, com uma API intuitiva e componentes que podem ser combinados e configurados de maneira flexível.
-
-
-
-  
+ 
 ## Robótica e Visão Computacional
    - Robótica
        - Conceito: Campo da tecnologia que envolve o design, construção, operação e uso de robôs.

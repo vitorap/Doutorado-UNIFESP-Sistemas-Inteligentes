@@ -32,7 +32,7 @@ Your contributions will be reviewed, and collaboration is encouraged to enhance 
 
 ## License
 
-This repository is open-source and available under the [MIT License](LICENSE.md). Feel free to use, modify, and share the content, but please adhere to the terms of the license.
+This repository is open-source and available under the [MIT License](LICENSE). Feel free to use, modify, and share the content, but please adhere to the terms of the license.
 
 ## Contact
 
